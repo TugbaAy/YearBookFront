@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>FSMVU Graduated Record Page</title>
+
+<link rel='stylesheet'
+	href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+<script src="../js/main.js"></script>
+<script src="../js/NewRecord.js"></script>
+
+<style>
+body {
+	background: white;
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color: #555;
+	text-align: left;
+}
+
+table {
+	border-collapse: inherit;
+	background-color: red;
+	align: right;
+	line-height: 3px;
+}
+
+th, td {
+	color: black;
+}
+
+.h1 {
+	color: white;
+	text-align: CENTER;
+	background-color: #215C8F;
+	background-width: 100px;
+	background-height: 50px;
+	font-size: 40px;
+}
+
+.create {
+	color: GREY;
+	font-size: 25PX;
+	text-decoration: underline;
+}
+
+.inputType {
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body ng-app="app">
+
+	<div ng-controller="UserNewRecordController">
+
+		<div class="container">
+
+
+			<h1 class="h1">FSMVU Graduated Page</h1>
+
+			<form:form class="form-horizantal" action="student.do" method="POST"
+				commandName="student" role="form">
+
+				<div class="row">
+					<div class="col-md-6" id="first" style="background-color: white;">
+						<img alt="Logo"
+							src="../img/FSM_Logo.png"
+							height="500px;" width="500px;">
+					</div>
+
+					<br>
+
+					<div class="col-md-6" id="second" style="background-color: white;">
+
+						<h1 class="create">Create New Account</h1>
+
+					</div>
+
+
+
+					<div class="col-md-3" id="second" style="background-color: white;">
+
+						<br> <br> <br> <input type="text" ng-model="user.name"
+							placeholder="Name" class="form-control inputType"> <br>
+						<input type="email" placeholder="Email" ng-model="user.mail"
+							class="form-control inputType"><br>
+
+					</div>
+
+					<div class="col-md-3" id="third" style="background-color: white;">
+
+						<br> <br> <br> <input type="text" ng-model="user.surname"
+							placeholder="Surname" class="form-control inputType"> <br>
+						<input type="password" ng-model="user.password" placeholder="Password"
+							class="form-control inputType"> <br>
+
+					</div>
+
+					<br>
+
+					<div class="col-md-6" id="third" style="background-color: white;">
+						<input type="date" ng-model="user.birthday" placeholder="Birthday" class="form-control">
+						<br> <input type="tel" placeholder="Phone"
+							class="form-control"> <br>
+
+					</div>
+
+					<div class="col-md-3" id="third" style="background-color: white;">
+						<input type="number" placeholder="Gradutaion Year"
+							class="form-control" /> <br>
+					</div>
+
+					<div class="col-md-3" id="third" style="background-color: white;">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" ng-model="user.department"
+								data-toggle="dropdown" aria-labelledby="dropdownMenuButton">
+								Department <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Computer Engineering</a></li>
+								<li><a href="#">Department of Pyhsics</a></li>
+								<li><a href="#">Software Engineering</a></li>
+							</ul>
+						</div>
+						<br>
+					</div>
+
+
+					<div class="col-md-3" id="third" style="background-color: white;">
+						<br> <input type="checkbox"> Remember me <br>
+					</div>
+
+					<div class="col-md-3" id="third" style="background-color: white;">
+						<br> <a href="#" ng-click="addUser()"
+							class="btn btn-success btn-md"> <span
+							class="glyphicon glyphicon-user"></span> >Create New Account
+						</a> <br>
+					</div>
+			</form:form>
+		</div>
+
+	</div>
+	<script src="../js/NewRecord.js"></script>
+</body>
+
+</html>

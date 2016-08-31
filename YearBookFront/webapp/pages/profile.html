@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<link rel="stylesheet" href="css/profile.css">
+<title>FSMVU Graduated Record Page</title>
+</head>
+<body ng-app="app">
+
+	<div ng-controller="UserController>
+			<div class="container">
+		<form:form class="form-horizantal" role="form">
+
+			<div class="row" ng-init="getUser()" ng-init="getComment()">
+
+				<div class="col-md-4" id="first" style="background-color: white;">
+
+					<img alt="Logo" src="../img/FSM_Logo.png" height="200px;" width="200px;">
+
+				</div>
+
+				<div class="col-md-4" id="second" style="background-color: white;">
+					<br> <br> <br> <label>{{ user.username }}</label> <br> <br> <br> <label>{{user.userMail}}</label>
+				</div>
+
+				<div class="col-md-4" id="third" style="background-color: white;">
+					<br> <br> <br> <label>{{user.usersurname}}</label> <br> <br> <br> <a href="../pages/editProfile.html"><input type="button"
+						class="btn btn-info btn-sm" name="button2" id="button2" value="Edit My Profile" /></a>
+				</div>
+			</div>
+	</div>
+	</form:form>
+	<br>
+	<br>
+
+
+	<form:form class="form-horizantal" role="form">
+
+		<div ng-controller="CommentController">
+			<div class="row">
+
+				<div class="col-md-9" id="third" style="background-color: white;">
+					<br>
+					<textarea rows="5" placeholder="Do Comment" ng-model="comment.description" class="form-control inputType"></textarea>
+					<br>
+				</div>
+
+				<div class="col-md-3" id="third" style="background-color: white;">
+					<br> <a href="#" class="btn btn-info btn-sm" ng-click="addComment()"> <span class="glyphicon glyphicon-edit"></span>Send <br> <a href="#"
+						class="btn btn-info btn-sm" ng-click="getAllUserComments()"> <span class="glyphicon glyphicon-edit"></span>GetList
+					</a> <br>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="comments">
+					<p>comment comment</p>
+				</div>
+			</div>
+	</form:form>
+	</div>
+	</div>
+</body>
+</html>

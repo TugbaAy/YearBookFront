@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<link rel="stylesheet" href="css/edit.css">
+<title>FSMVU Graduated Record Page</title>
+</head>
+<body ng-app="app">
+
+	<div ng-controller="UserEditController">
+
+		<div class="container">
+
+
+			<h1 class="h1">Edit Profile</h1>
+
+			<form:form class="form-horizantal" action="student.do" method="POST" commandName="student" role="form">
+
+				<div class="row">
+					<div class="col-md-6" id="first" style="background-color: white;">
+						<img alt="Logo" src="C:\dev\workspace\YearBookFront\webapp\img\FSM_Logo.png" height="500px;" width="500px;">
+					</div>
+
+
+
+					<div class="col-md-3" id="second" style="background-color: white;">
+
+						<br> <br> <br> <input type="text" placeholder="Name" ng-model="user.username" class="form-control inputType"> <br> <input type="email"
+							placeholder="Email" ng-model="user.userMail" class="form-control inputType"><br>
+
+					</div>
+
+					<div class="col-md-3" id="third" style="background-color: white;">
+						<br> <br> <br> <input type="text" placeholder="Surname" ng-model="user.usersurname" class="form-control inputType"> <br> <input
+							type="password" placeholder="Password" ng-model="user.password" class="form-control inputType"> <br>
+					</div>
+
+					<br>
+
+					<div class="col-md-6" id="third" style="background-color: white;">
+
+						<input type="date" placeholder="Birthday" ng-model="user.birthDate" class="form-control"> <br> <input type="tel" placeholder="Phone"
+							ng-model="user.phoneNumber" class="form-control"> <br>
+
+					</div>
+
+					<div class="col-md-3" id="third" style="background-color: white;">
+						<input type="number" placeholder="Gradutaion Year" ng-model="user.gradYear" class="form-control" /> <br>
+					</div>
+
+					<div class="col-md-3" id="third" style="background-color: white;">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-labelledby="dropdownMenuButton" ng-model="user.department">
+								Department <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Computer Engineering</a></li>
+								<li><a href="#">Department of Pyhsics</a></li>
+								<li><a href="#">Software Engineering</a></li>
+							</ul>
+						</div>
+						<br>
+					</div>
+
+
+					<div class="col-md-3" id="third" style="background-color: white;">
+						<br> <a href="#" ng-click="edit()" class="btn btn-success btn-md"> <span class="glyphicon glyphicon-user"></span> Edit My Profile
+						</a> <br>
+					</div>
+			</form:form>
+		</div>
+
+	</div>
+	<script src="../js/edit.js"></script>
+
+</body>
+</html>

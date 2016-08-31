@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<link rel="stylesheet" href="css/Login.css">
+<title>FSMVU Graduated Login Page</title>
+</head>
+<body ng-app="app">
+	<div ng-controller="LoginController">
+		<div class="container">
+			<h1 class="h1">FSMVU</h1>
+
+			<form:form class="form-horizantal" role="form">
+				<div class="row">
+					<div class="col-md-3">&nbsp;</div>
+					<div class="col-md-6" id="second" style="background-color: white;">
+						<input type="text" placeholder="Enter Mail Address" class="form-control inputType" ng-model="user.userMail"> <br>
+					</div>
+					<br>
+					<div class="col-md-3">&nbsp;</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3">&nbsp;</div>
+					<div class="col-md-6" id="second" style="background-color: white;">
+						<br> <br> <input type="password" placeholder="Enter Password" class="form-control inputType" ng-model="user.password"> <br>
+					</div>
+					<div class="col-md-3">&nbsp;</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-5">&nbsp;</div>
+					<div class="col-md-4" id="second" style="background-color: white;">
+						<br> <a href="#" class="btn btn-success btn-lg" ng-click="login()"> <span class="glyphicon glyphicon-record"></span>Login
+						</a> <br>
+					</div>
+					<div class="col-md-3">&nbsp;</div>
+				</div>
+			</form:form>
+		</div>
+	</div>
+
+</body>
+</html>
